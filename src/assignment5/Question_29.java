@@ -2,7 +2,7 @@ package assignment5;
 
 public class Question_29 {
 
-    private static int factorial(int num)
+    private int factorial(int num)
     {
         int product=1;
         for(int i = num; i>0; i--)
@@ -14,10 +14,11 @@ public class Question_29 {
 
     private static double mathExpression(int number)
     {
+        Question_29 obj = new Question_29(); // creating an object name 'obj'
         double a = 0;
         for(int i = 0; i<=number; i++)
         {
-            a = a + ((double)i/ factorial(i));
+            a = a + ((double)i/ obj.factorial(i));
         }
 
         return a;
