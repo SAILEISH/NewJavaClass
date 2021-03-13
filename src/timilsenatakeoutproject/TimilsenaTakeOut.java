@@ -138,6 +138,7 @@ public class TimilsenaTakeOut {
 
                         }
                         break;
+
                     case 2:
                         TimilsenaTakeOut.displayChineseFoodMenu();
                         System.out.println("Enter a number for meal: ");
@@ -158,6 +159,7 @@ public class TimilsenaTakeOut {
 
                         }
                         break;
+
                     case 3:
                         TimilsenaTakeOut.displayAmericanFoodMenu();
                         System.out.println("Enter a number for meal: ");
@@ -184,12 +186,27 @@ public class TimilsenaTakeOut {
                 }
 
                 number_of_trays=TimilsenaTakeOut.determineTrays(number_of_guests, feeds);
+
                 subtotal=TimilsenaTakeOut.getSubtotal(price, number_of_trays);
+
                 tax=TimilsenaTakeOut.getTax(subtotal,tax_rate);
+
                 tip=TimilsenaTakeOut.getTip(subtotal, tip_rate);
+
                 net_total= getGrandTotal(subtotal, tax, tip);
+
                 price_per= pricePerPerson(net_total, number_of_guests);
+
                 left_overs=determineLeftOvers(feeds, number_of_trays, number_of_guests);
+
+
+
+                /*
+                * here we will print in the console
+                * console print format and check for error
+                *
+                * */
+
 
                 System.out.println("You need "+number_of_trays+" trays");
                 System.out.println("Feeds: "+feeds);
