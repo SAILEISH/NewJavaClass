@@ -17,5 +17,4 @@ public class Question_43 {
                     "Index out of size of the array");
         }
     }
-
 }
